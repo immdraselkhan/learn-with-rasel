@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#0069B4',
-        'secondary': '#007EC3'
+        'primary': '#007EC3',
+        'secondary': '#0069B4'
       },
       fontFamily: {
         'sans': ['Mulish', 'sans-serif'],
