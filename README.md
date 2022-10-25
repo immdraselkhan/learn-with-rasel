@@ -1,4 +1,4 @@
-# Learn With Rasel
+# Learn with Rasel
 
 We believe that this platform will help you understand the complexities of programming in a simple and easy-to-understand.
 
