@@ -24,4 +24,8 @@
   .footer-menu {
     @apply flex items-center justify-center w-10 h-10 rounded-full bg-primary hover:bg-secondary dark:hover:bg-white text-white dark:hover:text-black;
   }
+
+  .hover-effect {
+    @apply hover:-translate-y-1 duration-300 ease-linear;
+  }
 }

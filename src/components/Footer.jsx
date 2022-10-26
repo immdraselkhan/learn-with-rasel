@@ -9,8 +9,8 @@ const Footer = () => {
   const {theme} = useContext(DarkThemeContext);
 
   return (
-    <footer className="bg-slate-50/60 backdrop-blur-2xl transition-colors duration-500 dark:bg-[#0B1120]/80 border-general border-t px-3">
-      <div className="max-w-7xl mx-auto divide-y divide-gray-400 divide-opacity-50">
+    <footer className="px-3 bg-slate-50/60 dark:bg-black/95 border-general border-t dark:border-white/10 backdrop-blur-2xl transition-colors duration-500">
+      <div className="max-w-7xl mx-auto divide-y divide-gray-400 divide-opacity-20">
         <div className="py-10">
           <img className="w-24 mx-auto md:mx-0" src={`${theme ? '/logo-dark.svg' : '/logo.svg'}`} alt="LWR Logo" />
         </div>

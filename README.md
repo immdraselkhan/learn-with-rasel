@@ -25,3 +25,6 @@ Documentation Link -> [Link](https://tailwindcss.com/docs)
 
 ### `React Toastify`
 [Documentation Link](https://fkhadra.github.io/react-toastify/introduction)
+
+### `headlessui`
+[Documentation Link](https://headlessui.com)

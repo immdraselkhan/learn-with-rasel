@@ -24,7 +24,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="border-general sticky top-0 z-40 border-b bg-slate-50/60 backdrop-blur-2xl transition-colors duration-500 dark:bg-[#0B1120]/80 p-3">
+    <header className="p-3 border-general border-b dark:border-white/10 bg-slate-50/60 dark:bg-black sticky top-0 z-40 backdrop-blur-2xl transition-colors duration-500">
       <nav className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between">
           <NavLink to="/"><img className="h-10" src={`${theme ? '/logo-dark.svg' : '/logo.svg'}`} alt="LWR logo" /></NavLink>
@@ -41,7 +41,7 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-6">
               <button className="text-xl" onClick={handleTheme}>{theme ? <FaMoon className="dark:text-white" /> : <FaSun />}</button>
-              <button className="text-sm font-medium px-3 py-2 rounded text-white dark:hover:text-black bg-black hover:bg-primary dark:bg-primary dark:hover:bg-white">Login</button>
+              <button className="text-sm font-medium px-3 py-2 rounded text-white dark:hover:text-black bg-black hover:bg-primary dark:bg-primary dark:hover:bg-gray-100">Login</button>
             </div>
             <div className="flex md:hidden">
               <button className="text-2xl dark:fill-white" onClick={() => setIsOpen(!isOpen)}>{!isOpen ? <FaBars /> : <FaTimes />}</button>
