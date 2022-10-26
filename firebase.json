@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "learnwithrasel",
     "public": "dist",
     "ignore": [
       "firebase.json",
