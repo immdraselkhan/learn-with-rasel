@@ -28,4 +28,8 @@
   .hover-effect {
     @apply hover:-translate-y-1 duration-300 ease-linear;
   }
+
+  .swiper-pagination-bullet {
+    @apply dark:text-white;
+  }
 }

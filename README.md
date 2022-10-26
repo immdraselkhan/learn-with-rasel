@@ -28,3 +28,6 @@ Documentation Link -> [Link](https://tailwindcss.com/docs)
 
 ### `headlessui`
 [Documentation Link](https://headlessui.com)
+
+### `React Rating`
+[Github Link](https://github.com/dreyescat/react-rating)
