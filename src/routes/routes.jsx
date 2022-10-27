@@ -5,6 +5,8 @@ import Home from '../components/Home'
 import Error from '../components/Error'
 import Login from '../components/Login'
 import Profile from '../components/Profile'
+import Register from '../components/Register'
+import PrivateRoute from './PrivateRoute'
 
 export const router = createBrowserRouter([
   {
@@ -21,8 +23,12 @@ export const router = createBrowserRouter([
         element: <Login />
       },
       {
+        path: 'register',
+        element: <Register />
+      },
+      {
         path: '/profile',
-        element: <Profile />
+        element: <PrivateRoute><Profile /></PrivateRoute>
       }
     ],
   },

@@ -10,7 +10,7 @@ const Login = () => {
   // Getting data using AuthContext
   const {user, googleProvider, twitterProvider, githubProvider, logInWithEmailPassword, logInWithPopup, passwordResetEmail} = useContext(AuthContext);
 
-  // Navigate hook
+  // useNavigate hook
   const navigate = useNavigate();
 
   // When user logged in redirect to profile
@@ -18,7 +18,7 @@ const Login = () => {
     navigate('/profile');
   };
 
-  // Location hook
+  // useLocation hook
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
 
@@ -95,10 +95,10 @@ const Login = () => {
   };
 
   return (
-    <section className="flex justify-center items-center h-screen bg-slate-50 dark:bg-[#0B1120]">
+    <section className="flex justify-center items-center py-32 bg-slate-50 dark:bg-[#0B1120]">
       <div className="px-8 py-10 text-black dark:text-white bg-gray-100 dark:bg-black w-full max-w-md rounded-lg shadow">
         <h2 className="mb-3 text-3xl font-bold text-center">Login to your account</h2>
-        <p className="text-sm text-center text-black/70 dark:text-white/70">Dont have account? <Link to="/register" className="hover:underline ml-1">Sign up here</Link></p>
+        <p className="text-sm text-center text-black/70 dark:text-white/70">Dont have account? <Link to="/register" className="hover:underline ml-1">Sign up here!</Link></p>
         <div className="my-6 space-y-4">
           <button onClick={() => handleSocialLogin(googleProvider)} className="flex items-center justify-center w-full p-4 space-x-4 rounded-md border border-black/70 hover:border-primary dark:border-white/70 dark:hover:border-secondary hover-effect">
             <FaGoogle className="text-xl" />
@@ -129,7 +129,7 @@ const Login = () => {
                 <label htmlFor="password" className="text-sm">Password</label>
                 <Link onClick={() => passwordReset(userEmail)} className="text-xs hover:underline text-black/70 dark:text-white/70">Forgot password?</Link>
               </div>
-              <input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 text-black/80 dark:text-white/100 bg-gray-50 dark:bg-gray-900 border border-black/10 hover:border-primary dark:border-white/10 dark:hover:border-secondary focus:outline-none rounded-md" required />
+              <input type="password" name="password" id="password" placeholder="******" className="w-full px-3 py-2 text-black/80 dark:text-white/100 bg-gray-50 dark:bg-gray-900 border border-black/10 hover:border-primary dark:border-white/10 dark:hover:border-secondary focus:outline-none rounded-md" required />
             </div>
           </div>
           <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-primary hover:bg-secondary text-white/100 dark:text-white/90 hover-effect">Log in</button>

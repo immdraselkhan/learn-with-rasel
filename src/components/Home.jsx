@@ -16,8 +16,8 @@ const Home = () => {
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-black dark:text-white leading-[60px]">Learn New Skills Online</h1>
             <p className="text-lg dark:text-white">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
             <div className="flex justify-center md:justify-start">
-              <Link className="text-white bg-primary py-2 px-5 hover:bg-secondary rounded hover-effect">Get Started</Link>
-              <Link className="text-white bg-black hover:bg-primary dark:text-black dark:bg-gray-100 dark:hover:bg-gray-200 py-2 px-5 ml-4 rounded hover-effect">Register</Link>
+              <Link to="/courses" className="text-white bg-primary py-2 px-5 hover:bg-secondary rounded hover-effect">Get Started</Link>
+              <Link to="/register" className="text-white bg-black hover:bg-primary dark:text-black dark:bg-gray-100 dark:hover:bg-gray-200 py-2 px-5 ml-4 rounded hover-effect">Register</Link>
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
