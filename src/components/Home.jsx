@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaStar, FaFileAlt, FaClock, FaChartBar, FaQuoteLeft, FaQuoteRight, FaVideo, FaGraduationCap, FaLaptopCode } from 'react-icons/fa'
+import { FaStar, FaFileAlt, FaClock, FaChartBar, FaVideo, FaGraduationCap, FaLaptopCode } from 'react-icons/fa'
 import Rating from 'react-rating'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
@@ -291,71 +291,71 @@ const Home = () => {
         <div className="max-w-[1250px] mx-auto py-10">
           <Swiper slidesPerView='auto' spaceBetween={25} pagination={{clickable: true}} modules={[Pagination]}>
             <SwiperSlide className="w-auto mt-1 pb-12">
-              <blockquote class="p-8 border hover:border-primary dark:border-white/10 dark:hover:border-secondary max-w-[400px] rounded-lg hover-effect">
-                <div class="flex items-center">
-                  <img class="h-16 w-16 rounded-full" src="https://source.unsplash.com/50x50/?portrait?1" alt="" />
-                  <div class="ml-4">
+              <blockquote className="p-8 border hover:border-primary dark:border-white/10 dark:hover:border-secondary max-w-[400px] rounded-lg hover-effect">
+                <div className="flex items-center">
+                  <img className="h-16 w-16 rounded-full" src="https://source.unsplash.com/50x50/?portrait?1" alt="" />
+                  <div className="ml-4">
                     <Rating
                       readonly
                       placeholderRating={2.7}
                       emptySymbol= {<FaStar className="text-black dark:text-white" />}
                       placeholderSymbol= {<FaStar className="text-primary" />}
                     />
-                    <p class="mt-1 text-lg font-medium dark:text-white">Paul Starr</p>
+                    <p className="mt-1 text-lg font-medium dark:text-white">Paul Starr</p>
                   </div>
                 </div>
-                <p class="mt-4 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem alias ut provident sapiente repellendus.</p>
+                <p className="mt-4 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem alias ut provident sapiente repellendus.</p>
               </blockquote>
             </SwiperSlide>
             <SwiperSlide className="w-auto mt-1 pb-12">
-              <blockquote class="p-8 border hover:border-primary dark:border-white/10 dark:hover:border-secondary max-w-[400px] rounded-lg hover-effect">
-                <div class="flex items-center">
-                  <img class="h-16 w-16 rounded-full" src="https://source.unsplash.com/50x50/?portrait?1" alt="" />
-                  <div class="ml-4">
+              <blockquote className="p-8 border hover:border-primary dark:border-white/10 dark:hover:border-secondary max-w-[400px] rounded-lg hover-effect">
+                <div className="flex items-center">
+                  <img className="h-16 w-16 rounded-full" src="https://source.unsplash.com/50x50/?portrait?2" alt="" />
+                  <div className="ml-4">
                     <Rating
                       readonly
                       placeholderRating={2.7}
                       emptySymbol= {<FaStar className="text-black dark:text-white" />}
                       placeholderSymbol= {<FaStar className="text-primary" />}
                     />
-                    <p class="mt-1 text-lg font-medium dark:text-white">Paul Starr</p>
+                    <p className="mt-1 text-lg font-medium dark:text-white">Paul Starr</p>
                   </div>
                 </div>
-                <p class="mt-4 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem alias ut provident sapiente repellendus.</p>
+                <p className="mt-4 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem alias ut provident sapiente repellendus.</p>
               </blockquote>
             </SwiperSlide>
             <SwiperSlide className="w-auto mt-1 pb-12">
-              <blockquote class="p-8 border hover:border-primary dark:border-white/10 dark:hover:border-secondary max-w-[400px] rounded-lg hover-effect">
-                <div class="flex items-center">
-                  <img class="h-16 w-16 rounded-full" src="https://source.unsplash.com/50x50/?portrait?1" alt="" />
-                  <div class="ml-4">
+              <blockquote className="p-8 border hover:border-primary dark:border-white/10 dark:hover:border-secondary max-w-[400px] rounded-lg hover-effect">
+                <div className="flex items-center">
+                  <img className="h-16 w-16 rounded-full" src="https://source.unsplash.com/50x50/?portrait?3" alt="" />
+                  <div className="ml-4">
                     <Rating
                       readonly
                       placeholderRating={2.7}
                       emptySymbol= {<FaStar className="text-black dark:text-white" />}
                       placeholderSymbol= {<FaStar className="text-primary" />}
                     />
-                    <p class="mt-1 text-lg font-medium dark:text-white">Paul Starr</p>
+                    <p className="mt-1 text-lg font-medium dark:text-white">Paul Starr</p>
                   </div>
                 </div>
-                <p class="mt-4 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem alias ut provident sapiente repellendus.</p>
+                <p className="mt-4 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem alias ut provident sapiente repellendus.</p>
               </blockquote>
             </SwiperSlide>
             <SwiperSlide className="w-auto mt-1 pb-12">
-              <blockquote class="p-8 border hover:border-primary dark:border-white/10 dark:hover:border-secondary max-w-[400px] rounded-lg hover-effect">
-                <div class="flex items-center">
-                  <img class="h-16 w-16 rounded-full" src="https://source.unsplash.com/50x50/?portrait?1" alt="" />
-                  <div class="ml-4">
+              <blockquote className="p-8 border hover:border-primary dark:border-white/10 dark:hover:border-secondary max-w-[400px] rounded-lg hover-effect">
+                <div className="flex items-center">
+                  <img className="h-16 w-16 rounded-full" src="https://source.unsplash.com/50x50/?portrait?4" alt="" />
+                  <div className="ml-4">
                     <Rating
                       readonly
                       placeholderRating={2.7}
                       emptySymbol= {<FaStar className="text-black dark:text-white" />}
                       placeholderSymbol= {<FaStar className="text-primary" />}
                     />
-                    <p class="mt-1 text-lg font-medium dark:text-white">Paul Starr</p>
+                    <p className="mt-1 text-lg font-medium dark:text-white">Paul Starr</p>
                   </div>
                 </div>
-                <p class="mt-4 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem alias ut provident sapiente repellendus.</p>
+                <p className="mt-4 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem alias ut provident sapiente repellendus.</p>
               </blockquote>
             </SwiperSlide>
           </Swiper>
