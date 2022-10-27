@@ -129,7 +129,7 @@ const Login = () => {
                 <label htmlFor="password" className="text-sm">Password</label>
                 <Link onClick={() => passwordReset(userEmail)} className="text-xs hover:underline text-black/70 dark:text-white/70">Forgot password?</Link>
               </div>
-              <input type="password" name="password" id="password" placeholder="******" className="w-full px-3 py-2 text-black/80 dark:text-white/100 bg-gray-50 dark:bg-gray-900 border border-black/10 hover:border-primary dark:border-white/10 dark:hover:border-secondary focus:outline-none rounded-md" required />
+              <input type="password" name="password" id="password" placeholder="******" className="w-full px-3 py-2 text-black/80 dark:text-white/100 bg-gray-50 dark:bg-gray-900 border border-black/10 hover:border-primary dark:border-white/10 dark:hover:border-secondary focus:outline-none rounded-md" minlength="6" required />
             </div>
           </div>
           <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-primary hover:bg-secondary text-white/100 dark:text-white/90 hover-effect">Log in</button>
