@@ -4,8 +4,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/UserContext';
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
+import { LoaderContext } from '../contexts/LoadingContext';
 
 const Login = () => {
+
+  // Getting data using LoaderContext
+  const {setLoading} = useContext(LoaderContext);
 
   // Getting data using AuthContext
   const {user, googleProvider, twitterProvider, githubProvider, logInWithEmailPassword, logInWithPopup, passwordResetEmail} = useContext(AuthContext);
@@ -14,9 +18,9 @@ const Login = () => {
   const navigate = useNavigate();
 
   // When user logged in redirect to profile
-  if (user?.uid) {
-    navigate('/profile');
-  };
+  // if (user?.uid) {
+  //   navigate('/profile');
+  // };
 
   // useLocation hook
   const location = useLocation();
@@ -46,6 +50,8 @@ const Login = () => {
       e.target.reset();
       // Reditect to the targeted page
       navigate(from, {replace: true});
+      // Loader state false
+      setLoading(false);
     }).catch((error) => {
       // Set email to the state
       setUserEmail(email);
@@ -69,6 +75,8 @@ const Login = () => {
       });
       // Reditect to the targeted page
       navigate(from, {replace: true});
+      // Loader state false
+      setLoading(false);
     }).catch((error) => {
       // Error toast
       toast.error(`${error.code}`, {
@@ -95,7 +103,7 @@ const Login = () => {
   };
 
   return (
-    <section className="flex justify-center items-center py-32 bg-slate-50 dark:bg-[#0B1120]">
+    <section className="px-3 flex justify-center items-center py-32 bg-slate-50 dark:bg-[#0B1120]">
       <div className="px-8 py-10 text-black dark:text-white bg-gray-100 dark:bg-black w-full max-w-md rounded-lg shadow">
         <h2 className="mb-3 text-3xl font-bold text-center">Login to your account</h2>
         <p className="text-sm text-center text-black/70 dark:text-white/70">Dont have account? <Link to="/register" className="hover:underline ml-1">Sign up here!</Link></p>
@@ -129,7 +137,7 @@ const Login = () => {
                 <label htmlFor="password" className="text-sm">Password</label>
                 <Link onClick={() => passwordReset(userEmail)} className="text-xs hover:underline text-black/70 dark:text-white/70">Forgot password?</Link>
               </div>
-              <input type="password" name="password" id="password" placeholder="******" className="w-full px-3 py-2 text-black/80 dark:text-white/100 bg-gray-50 dark:bg-gray-900 border border-black/10 hover:border-primary dark:border-white/10 dark:hover:border-secondary focus:outline-none rounded-md" minlength="6" required />
+              <input type="password" name="password" id="password" placeholder="******" className="w-full px-3 py-2 text-black/80 dark:text-white/100 bg-gray-50 dark:bg-gray-900 border border-black/10 hover:border-primary dark:border-white/10 dark:hover:border-secondary focus:outline-none rounded-md" minLength="6" required />
             </div>
           </div>
           <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-primary hover:bg-secondary text-white/100 dark:text-white/90 hover-effect">Log in</button>

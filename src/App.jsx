@@ -6,14 +6,20 @@ import { ToastContainer } from 'react-toastify'
 import ThemeContext from './contexts/ThemeContext'
 import UserContext from './contexts/UserContext'
 import './index.css'
+import DataContext from './contexts/DataContext'
+import LoadingContext from './contexts/LoadingContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeContext>
-      <UserContext>
-        <RouterProvider router={router} />
-        <ToastContainer />
-      </UserContext>
-    </ThemeContext>
+    <LoadingContext>
+      <ThemeContext>
+        <UserContext>
+          <DataContext>
+            <RouterProvider router={router} />
+            <ToastContainer />
+          </DataContext>
+        </UserContext>
+      </ThemeContext>
+    </LoadingContext>
   </React.StrictMode>
 );

@@ -1,6 +1,7 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import { getAuth, GoogleAuthProvider, TwitterAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, updateProfile, signOut } from 'firebase/auth'
 import app from '../firebase/firebase.init'
+import { LoaderContext } from './LoadingContext';
 
 // Declare auth from firebase sdk & imporing the app from firebase.init.js
 const auth = getAuth(app);
@@ -10,11 +11,11 @@ export const AuthContext = createContext();
 
 const UserContext = ({children}) => {
 
+  // Getting data using LoaderContext
+  const {setLoading} = useContext(LoaderContext);
+
   // User state
   const [user, setUser] = useState('');
-
-  // Loading state
-  const [loading, setLoading] = useState(true);
 
   // Get the currently signed-in user
   useEffect(() => {
@@ -74,7 +75,7 @@ const UserContext = ({children}) => {
   };
 
   return (
-    <AuthContext.Provider value={{user, googleProvider, twitterProvider, githubProvider, signupWithEmailPassword, logInWithEmailPassword, logInWithPopup, verifyEmail, passwordResetEmail, updateUserProfile, userLogOut, loading}}>
+    <AuthContext.Provider value={{user, googleProvider, twitterProvider, githubProvider, signupWithEmailPassword, logInWithEmailPassword, logInWithPopup, verifyEmail, passwordResetEmail, updateUserProfile, userLogOut}}>
       {children}
     </AuthContext.Provider>
   )
