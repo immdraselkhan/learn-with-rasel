@@ -5,21 +5,18 @@ import { router } from './routes/routes'
 import { ToastContainer } from 'react-toastify'
 import ThemeContext from './contexts/ThemeContext'
 import UserContext from './contexts/UserContext'
-import './index.css'
 import DataContext from './contexts/DataContext'
-import LoadingContext from './contexts/LoadingContext'
+import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <LoadingContext>
-      <ThemeContext>
-        <UserContext>
-          <DataContext>
-            <RouterProvider router={router} />
-            <ToastContainer />
-          </DataContext>
-        </UserContext>
-      </ThemeContext>
-    </LoadingContext>
+    <ThemeContext>
+      <UserContext>
+        <DataContext>
+          <RouterProvider router={router} />
+          <ToastContainer />
+        </DataContext>
+      </UserContext>
+    </ThemeContext>
   </React.StrictMode>
 );

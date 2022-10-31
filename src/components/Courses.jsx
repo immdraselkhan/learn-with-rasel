@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { CoursesContext } from '../contexts/DataContext';
-import CourseCard from './CourseCard';
+import { CoursesContext } from '../contexts/DataContext'
+import CourseCard from './CourseCard'
 
 const Courses = () => {
   

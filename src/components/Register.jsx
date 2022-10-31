@@ -13,9 +13,9 @@ const Register = () => {
   // useNavigate hook
   const navigate = useNavigate();
 
-  // When user logged in redirect to profile
+  // When user logged in redirect to home
   if (user?.uid) {
-    navigate('/profile');
+    navigate('/');
   };
 
   // Handle form submit
@@ -24,7 +24,7 @@ const Register = () => {
     e.preventDefault();
     // Getting name field value
     const name = e.target.name.value;
-    // Getting name field value
+    // Getting photo url field value
     const userPhoto = e.target.photo.value;
     // Getting email field value
     const email = e.target.email.value;
@@ -59,8 +59,8 @@ const Register = () => {
       });
       // Form reset
       e.target.reset();
-      // Redirect to profile page
-      navigate('/profile');
+      // Redirect to home
+      navigate('/');
     }).catch((error) => {
       // Error toast
       toast.error(`${error.code}`, {
@@ -80,8 +80,8 @@ const Register = () => {
       toast.success('Account created successfully!', {
         autoClose: 1500, position: toast.POSITION.TOP_CENTER
       });
-      // Redirect to profile page
-      navigate('/profile');
+      // Redirect to home page
+      navigate('/');
     }).catch((error) => {
       // Error toast
       toast.error(`${error.code}`, {

@@ -1,20 +1,15 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
-import { LoaderContext } from './LoadingContext';
-
+import React, { createContext, useEffect, useState } from 'react'
 // Creating context
 export const CoursesContext = createContext([]);
 
 const DataContext = ({children}) => {
-
-  // Getting data using LoaderContext
-  const {setLoading} = useContext(LoaderContext);
   
   // Fetched all courses state
   const [allCourses, setAllCourses] = useState([]);
 
   // Fetching all courses from api server then set to state
   useEffect(() => {
-    fetch('http://localhost:8000/courses')
+    fetch('https://api-learnwithrasel.vercel.app/courses')
     .then(res => res.json())
     .then(data => setAllCourses(data.data))
     .catch(error => console.log(error));
@@ -25,7 +20,7 @@ const DataContext = ({children}) => {
 
   // Fetching popular courses from api server then set to state
   useEffect(() => {
-    fetch('http://localhost:8000/courses/popular')
+    fetch('https://api-learnwithrasel.vercel.app/courses/popular')
     .then(res => res.json())
     .then(data => setPopularCourses(data))
     .catch(error => console.log(error));
@@ -36,7 +31,7 @@ const DataContext = ({children}) => {
 
   // Fetching unique categories from api server then set to state
   useEffect(() => {
-    fetch('http://localhost:8000/courses/categories')
+    fetch('https://api-learnwithrasel.vercel.app/courses/categories')
     .then(res => res.json())
     .then(data => setCategories(data))
     .catch(error => console.log(error));

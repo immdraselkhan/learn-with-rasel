@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link, useLoaderData, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom'
 
 const PremiumAccess = () => {
 
   // Getting data using useLoaderData hook
   const course = useLoaderData();
 
-  const {title, description, slug, thumbnail, instructor, instructorId, instructorPhoto, rating, review, lessons, regularPrice, salePrice, category, categoryId, language, duration, level, totalEnrolled, courseId} = course;
+  const {title, description, thumbnail} = course;
 
   return (
     <section className="text-gray-600 dark:text-white bg-slate-50 dark:bg-[#0B1120]">

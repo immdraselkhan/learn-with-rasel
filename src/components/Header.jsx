@@ -18,7 +18,7 @@ const Header = () => {
   
   // Theme handler and also set the color schema to local storage
   const handleTheme = () => {
-    setTheme(!theme)
+    setTheme(!theme);
     localStorage.theme = theme ? 'light' : 'dark';
   };
 
@@ -49,6 +49,9 @@ const Header = () => {
     });
   };
 
+  // On hover dropdown state
+  const [isShowing, setIsShowing] = useState(false);
+
   return (
     <header className="p-3 border-general border-b dark:border-white/10 bg-slate-50/60 dark:bg-black sticky top-0 z-40 backdrop-blur-2xl transition-colors duration-500">
       <nav className="max-w-7xl mx-auto">
@@ -68,11 +71,11 @@ const Header = () => {
             <div className="flex items-center gap-6">
               <button className="text-xl" onClick={handleTheme}>{theme ? <FaMoon className="dark:text-white" /> : <FaSun />}</button>
               {user?.uid &&
-              <Menu as="div" className="relative inline-block text-left">
+              <Menu onMouseEnter={() => setIsShowing(true)} onMouseLeave={() => setIsShowing(false)} as="div" className="relative inline-block text-left">
                 <Menu.Button>
-                  <img className="h-10 w-10 rounded-full" src={user?.photoURL || 'https://source.unsplash.com/50x50/?portrait?1'} alt={user?.displayName} />
+                  <img className="h-10 w-10 rounded-full" src={user?.photoURL || 'https://source.unsplash.com/50x50/?portrait?1'} />
                 </Menu.Button>
-                <Transition enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+                <Transition show={isShowing} onMouseEnter={() => setIsShowing(true)} onMouseLeave={() => setIsShowing(false)} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
                   <Menu.Items className="absolute right-0 mt-3 origin-top-right bg-white dark:bg-black divide-y dark:divide-white/20 rounded-b-md w-max">
                     <div className="p-5">
                       <Menu.Item><button onClick={() => navigate('/profile')} className="text-black dark:text-white flex items-center gap-2"><MdOutlineWavingHand /> Hi, {user?.displayName || 'Welcome back!'}</button></Menu.Item>

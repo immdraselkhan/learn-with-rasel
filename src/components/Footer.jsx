@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FaFacebook, FaTwitter, FaGithub, FaYoutube } from 'react-icons/fa'
-import { DarkThemeContext } from '../contexts/ThemeContext';
+import { DarkThemeContext } from '../contexts/ThemeContext'
 
 const Footer = () => {
 

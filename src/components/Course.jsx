@@ -1,7 +1,7 @@
 import React from 'react'
-import { FaStar, FaDownload } from 'react-icons/fa';
+import { FaStar, FaDownload } from 'react-icons/fa'
 import Rating from 'react-rating';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom'
 import Pdf from 'react-to-pdf'
 
 const ref = React.createRef();
@@ -11,7 +11,7 @@ const Course = () => {
   // Getting data using useLoaderData hook
   const course = useLoaderData();
 
-  const {title, description, slug, thumbnail, instructor, instructorId, instructorPhoto, rating, review, lessons, regularPrice, salePrice, category, categoryId, language, duration, level, totalEnrolled, courseId} = course;
+  const {title, description, slug, thumbnail, instructor, rating, lessons, regularPrice, salePrice, category, language, duration, level, totalEnrolled} = course;
 
   return (
     <section className="px-3 py-24 text-gray-600 bg-slate-50 dark:bg-[#0B1120] body-font overflow-hidden">

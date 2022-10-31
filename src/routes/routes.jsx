@@ -41,7 +41,7 @@ export const router = createBrowserRouter([
       {
         path: '/course/:courseSlug',
         element: <Course />,
-        loader: ({params}) => fetch(`https://api-learnwithrasel.vercel.app/${params.courseSlug}`)
+        loader: ({params}) => fetch(`https://api-learnwithrasel.vercel.app/course/${params.courseSlug}`)
       },
       {
         path: '/checkout/:courseSlug',

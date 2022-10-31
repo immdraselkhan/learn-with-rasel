@@ -1,11 +1,11 @@
 import React from 'react'
-import { FaChartBar, FaClock, FaFileAlt, FaStar } from 'react-icons/fa';
-import Rating from 'react-rating';
-import { Link } from 'react-router-dom';
+import { FaChartBar, FaClock, FaFileAlt, FaStar } from 'react-icons/fa'
+import Rating from 'react-rating'
+import { Link } from 'react-router-dom'
 
 const CourseCard = ({course}) => {
 
-  const {title, slug, thumbnail, instructor, instructorId, instructorPhoto, rating, review, lessons, regularPrice, salePrice, category, categoryId, language, duration, level, totalEnrolled, courseId} = course;
+  const {title, slug, thumbnail, instructor, instructorPhoto, rating, lessons, regularPrice, salePrice, duration, level} = course;
 
   return (
     <Link to={`/course/${slug}`}>

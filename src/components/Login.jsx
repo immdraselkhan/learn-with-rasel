@@ -1,26 +1,17 @@
 import React, { useContext, useState } from 'react'
 import { FaGoogle, FaGithub, FaTwitter } from 'react-icons/fa'
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../contexts/UserContext';
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../contexts/UserContext'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
-import { LoaderContext } from '../contexts/LoadingContext';
 
 const Login = () => {
 
-  // Getting data using LoaderContext
-  const {setLoading} = useContext(LoaderContext);
-
   // Getting data using AuthContext
-  const {user, googleProvider, twitterProvider, githubProvider, logInWithEmailPassword, logInWithPopup, passwordResetEmail} = useContext(AuthContext);
+  const {googleProvider, twitterProvider, githubProvider, logInWithEmailPassword, logInWithPopup, passwordResetEmail, setLoading} = useContext(AuthContext);
 
   // useNavigate hook
   const navigate = useNavigate();
-
-  // When user logged in redirect to profile
-  // if (user?.uid) {
-  //   navigate('/profile');
-  // };
 
   // useLocation hook
   const location = useLocation();
@@ -78,6 +69,7 @@ const Login = () => {
       // Loader state false
       setLoading(false);
     }).catch((error) => {
+      console.log(error)
       // Error toast
       toast.error(`${error.code}`, {
         autoClose: 1500, position: toast.POSITION.TOP_CENTER

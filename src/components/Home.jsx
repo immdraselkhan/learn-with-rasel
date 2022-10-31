@@ -34,7 +34,7 @@ const Home = () => {
       <section className="px-3 bg-slate-50 dark:bg-[#0B1120]">
         <div className="max-w-7xl mx-auto text-center space-y-3 dark:text-white">
           <h2 className="text-2xl md:text-3xl font-extrabold">Top Categories</h2>
-          <p className="pt-2 text-lg">Lorem ipsum dolor sit amet, consectetur</p>
+          <p className="pt-2 text-lg">Popular courses categories</p>
         </div>
         <div className="max-w-7xl mx-auto py-10">
           <Swiper slidesPerView='auto' spaceBetween={25} pagination={{clickable: true}} modules={[Pagination]}>
@@ -105,28 +105,30 @@ const Home = () => {
           <Swiper slidesPerView='auto' spaceBetween={25} pagination={{clickable: true}} modules={[Pagination]}>
             {popularCourses.map(course => 
             <SwiperSlide key={course.courseId} className="w-auto mt-1 pb-12">
-              <div className="text-black dark:text-white max-w-[300px] hover-effect">
-                <img className="rounded-t" src={course?.thumbnail} alt={course?.instructor} />
-                <div className="p-5 space-y-5 rounded-b border-x border-b hover:border-primary dark:border-white/10 dark:hover:border-primary">
-                  <Rating readonly placeholderRating={`${course?.rating}`} emptySymbol= {<FaStar className="text-black dark:text-white" />} placeholderSymbol= {<FaStar className="text-primary" />}/>
-                  <h3>{course?.title}</h3>
-                  <div className="flex gap-5">
-                    <small className="flex items-center gap-1"><FaFileAlt />{course?.lessons} Lessons</small>
-                    <small className="flex items-center gap-1"><FaClock />{course?.duration} {course?.duration == 1 ? 'Day' : 'Days'}</small>
-                    <small className="flex items-center gap-1"><FaChartBar />{course?.level}</small>
-                  </div>
-                  <hr className="dark:border-white/10" />
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <img className="h-8 rounded-full" src={course?.instructorPhoto} alt={course?.instructor} />
-                      <small>{course?.instructor}</small>
+              <Link to={`/course/${course.slug}`}>
+                <div className="text-black dark:text-white max-w-[300px] hover-effect">
+                  <img className="rounded-t" src={course?.thumbnail} alt={course?.instructor} />
+                  <div className="p-5 space-y-5 rounded-b border-x border-b hover:border-primary dark:border-white/10 dark:hover:border-primary">
+                    <Rating readonly placeholderRating={`${course?.rating}`} emptySymbol= {<FaStar className="text-black dark:text-white" />} placeholderSymbol= {<FaStar className="text-primary" />}/>
+                    <h3>{course?.title}</h3>
+                    <div className="flex gap-5">
+                      <small className="flex items-center gap-1"><FaFileAlt />{course?.lessons} Lessons</small>
+                      <small className="flex items-center gap-1"><FaClock />{course?.duration} {course?.duration == 1 ? 'Day' : 'Days'}</small>
+                      <small className="flex items-center gap-1"><FaChartBar />{course?.level}</small>
                     </div>
-                    <div>
-                      <p><strike>{course?.salePrice || ''}</strike> {course?.regularPrice}</p>
+                    <hr className="dark:border-white/10" />
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <img className="h-8 rounded-full" src={course?.instructorPhoto} alt={course?.instructor} />
+                        <small>{course?.instructor}</small>
+                      </div>
+                      <div>
+                        <p><strike>{course?.salePrice || ''}</strike> {course?.regularPrice}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>)}
           </Swiper>
         </div>

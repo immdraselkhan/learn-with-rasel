@@ -1,16 +1,11 @@
 import React, { useContext } from 'react'
-import { LoaderContext } from '../contexts/LoadingContext';
 import { AuthContext } from '../contexts/UserContext';
 
 const Profile = () => {
 
   // Getting data using AuthContext
   const {user} = useContext(AuthContext);
-
-    // // Getting data using LoadingContext
-    // const {loading, setLoading} = useContext(LoaderContext);
-    // console.log(loading)
-
+  
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className='flex justify-center'>
