@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaStar, FaDownload } from 'react-icons/fa'
-import Rating from 'react-rating';
+import Rating from 'react-rating'
 import { Link, useLoaderData } from 'react-router-dom'
 import Pdf from 'react-to-pdf'
 
