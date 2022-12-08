@@ -2,6 +2,11 @@
 
 We believe that this platform will help you understand the complexities of programming in a simple and easy-to-understand.
 
+#### API Server - [https://api-learnwithrasel.vercel.app](https://api-learnwithrasel.vercel.app)
+#### API Code - [https://github.com/immdraselkhan/api-learn-with-rasel](https://github.com/immdraselkhan/api-learn-with-rasel)
+
+#### Live Website - [https://learn-with-rasel.web.app](https://learn-with-rasel.web.app)
+
 ## React Vite
 Documentation -> [Link](https://vitejs.dev/guide)
 
